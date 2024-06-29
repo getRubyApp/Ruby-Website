@@ -46,7 +46,9 @@ export default function Updates() {
 							</article>
 						</Link>
 
-						<hr className="mx-4 my-1 border-t border-zinc-300 dark:border-zinc-700 max-w-xl group-last:hidden" />
+						<div className="px-4 my-1 max-w-xl">
+							<hr className="border-t border-zinc-300 dark:border-zinc-700 group-last:hidden" />
+						</div>
 					</li>
 				))}
 			</ul>
