@@ -1,5 +1,12 @@
 import { allPosts } from "content-collections";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+	title: "Updates",
+	description:
+		"Stay up to date with the latest Ruby news, updates, and features.",
+};
 
 export default function Newsroom() {
 	return (
