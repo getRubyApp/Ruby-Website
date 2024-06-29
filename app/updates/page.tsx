@@ -14,6 +14,7 @@ export default function Updates() {
 			<h1 className="font-bold text-3xl lg:text-4xl tracking-tight">
 				Updates
 			</h1>
+
 			<p className="text-zinc-800 dark:text-zinc-200 py-2">
 				Stay up to date with the latest Ruby news and features.{" "}
 				<a
@@ -24,27 +25,26 @@ export default function Updates() {
 				</a>{" "}
 				for more frequent updates.
 			</p>
-			<ul className="max-w-xl">
-				{allPosts.map((post) => (
-					<li
-						key={post._meta.path}
-						className="p-4 transition ease-in-out rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800"
-					>
-						<Link href={`/updates/${post._meta.path}`}>
-							<time
-								dateTime={post.date.toISOString()}
-								className="text-zinc-700 dark:text-zinc-300"
-							>
-								{post.date.toLocaleDateString("en-US", {
-									dateStyle: "long",
-								})}
-							</time>
-							<h2 className="font-bold text-2xl">{post.title}</h2>
-							{post.summary && <p>{post.summary}</p>}
-						</Link>
-					</li>
-				))}
-			</ul>
+
+			{allPosts.map((post) => (
+				<Link
+					key={post._meta.path}
+					href={`/updates/${post._meta.path}`}
+				>
+					<article className="max-w-xl p-4 transition ease-in-out rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800">
+						<time
+							dateTime={post.date.toISOString()}
+							className="text-zinc-700 dark:text-zinc-300"
+						>
+							{post.date.toLocaleDateString("en-US", {
+								dateStyle: "long",
+							})}
+						</time>
+						<h2 className="font-bold text-2xl">{post.title}</h2>
+						{post.summary && <p>{post.summary}</p>}
+					</article>
+				</Link>
+			))}
 		</main>
 	);
 }
