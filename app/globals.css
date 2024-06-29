@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--blue-300: theme("colors.blue.300");
+	--blue-400: theme("colors.blue.400");
+	--blue-500: theme("colors.blue.500");
+	--blue-600: theme("colors.blue.600");
+	--blue-700: theme("colors.blue.700");
+	--indigo-300: theme("colors.indigo.300");
+	--indigo-700: theme("colors.indigo.700");
+	--violet-200: theme("colors.violet.200");
+	--violet-800: theme("colors.violet.800");
+}

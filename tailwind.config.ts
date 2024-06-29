@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
-// @ts-ignore This is a hack to get the tailwind colors
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 const config: Config = {
 	content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -22,18 +20,7 @@ const config: Config = {
 			},
 		},
 	},
-	plugins: [typography, addVariablesForColors],
+	plugins: [typography],
 };
-
-function addVariablesForColors({ addBase, theme }: any) {
-	const allColors = flattenColorPalette(theme("colors"));
-	const newVars = Object.fromEntries(
-		Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-	);
-
-	addBase({
-		":root": newVars,
-	});
-}
 
 export default config;
