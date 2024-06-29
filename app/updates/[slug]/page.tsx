@@ -1,3 +1,4 @@
+import { CustomMDX } from "@/components/CustomMDX";
 import { allPosts } from "content-collections";
 import { notFound } from "next/navigation";
 
@@ -25,7 +26,7 @@ export default function NewsroomPost({ params }: { params: { slug: string } }) {
 
 			<h1>{post.title}</h1>
 
-			{post.content}
+			<CustomMDX code={post.mdx} />
 		</main>
 	);
 }
