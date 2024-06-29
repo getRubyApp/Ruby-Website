@@ -27,30 +27,32 @@ export default function Updates() {
 			</p>
 
 			<ul>
-				{allPosts.map((post) => (
-					<li key={post._meta.path} className="group">
-						<Link href={`/updates/${post._meta.path}`}>
-							<article className="p-4 transition ease-in-out rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800 max-w-xl">
-								<time
-									dateTime={post.date.toISOString()}
-									className="text-zinc-700 dark:text-zinc-300"
-								>
-									{post.date.toLocaleDateString("en-US", {
-										dateStyle: "long",
-									})}
-								</time>
-								<h2 className="font-bold text-2xl">
-									{post.title}
-								</h2>
-								{post.summary && <p>{post.summary}</p>}
-							</article>
-						</Link>
+				{allPosts
+					.sort((a, b) => b.date.getTime() - a.date.getTime())
+					.map((post) => (
+						<li key={post._meta.path} className="group">
+							<Link href={`/updates/${post._meta.path}`}>
+								<article className="p-4 transition ease-in-out rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800 max-w-xl">
+									<time
+										dateTime={post.date.toISOString()}
+										className="text-zinc-700 dark:text-zinc-300"
+									>
+										{post.date.toLocaleDateString("en-US", {
+											dateStyle: "long",
+										})}
+									</time>
+									<h2 className="font-bold text-2xl">
+										{post.title}
+									</h2>
+									{post.summary && <p>{post.summary}</p>}
+								</article>
+							</Link>
 
-						<div className="px-4 my-1 max-w-xl">
-							<hr className="border-t border-zinc-300 dark:border-zinc-700 group-last:hidden" />
-						</div>
-					</li>
-				))}
+							<div className="px-4 my-1 max-w-xl">
+								<hr className="border-t border-zinc-300 dark:border-zinc-700 group-last:hidden" />
+							</div>
+						</li>
+					))}
 			</ul>
 		</main>
 	);
