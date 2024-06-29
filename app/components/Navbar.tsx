@@ -14,10 +14,10 @@ export function Navbar() {
 
 				<div className="flex items-center space-x-4">
 					<Link
-						href="/newsroom"
+						href="/updates"
 						className="hover:text-zinc-800 dark:hover:text-zinc-200 hover:underline transition ease-in-out"
 					>
-						Newsroom
+						Updates
 					</Link>
 
 					<Link
