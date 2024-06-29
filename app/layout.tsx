@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: {
 		template: "%s — Ruby",
-		default: "Ruby",
+		default: "Ruby — News that Shines",
 	},
 	description:
 		"Ruby is a beautifully designed news app for Apple platforms, built to be simple and easy to use.",

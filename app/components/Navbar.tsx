@@ -1,4 +1,4 @@
-import { AppStoreIcon } from "@/components/Icons";
+import { AppStoreIcon, RubyIcon } from "@/components/Icons";
 import Link from "next/link";
 
 export function Navbar() {
@@ -7,8 +7,9 @@ export function Navbar() {
 			<div className="flex justify-between items-center rounded-full backdrop-blur-lg bg-zinc-50/50 dark:bg-zinc-950/50 p-1 max-w-6xl w-full border border-zinc-300/50 dark:border-zinc-700/50 drop-shadow-sm">
 				<Link
 					href="/"
-					className="text-xl font-bold pl-3 hover:text-zinc-800 dark:hover:text-zinc-200 transition ease-in-out"
+					className="flex items-center gap-2 text-xl font-bold pl-3 text-pink-700 dark:text-pink-300 hover:text-zinc-800 dark:hover:text-zinc-200 transition ease-in-out"
 				>
+					<RubyIcon />
 					Ruby
 				</Link>
 
