@@ -12,7 +12,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 	};
 }
 
-export default function NewsroomPost({ params }: { params: { slug: string } }) {
+export default function Post({ params }: { params: { slug: string } }) {
 	const post = allPosts.find((post) => post._meta.path === params.slug);
 	if (!post) return notFound();
 
