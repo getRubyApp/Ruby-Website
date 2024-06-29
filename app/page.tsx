@@ -25,7 +25,13 @@ export default function Home() {
 				Download on the App Store
 			</a>
 
-			<Image src={Hero} alt="Ruby on various Apple devices" />
+			<Image
+				src={Hero}
+				alt="Ruby on various Apple devices"
+				placeholder="blur"
+				sizes="(max-width: 1152px) 100vw, 1152px"
+				priority
+			/>
 		</main>
 	);
 }
