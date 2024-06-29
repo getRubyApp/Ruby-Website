@@ -8,7 +8,13 @@ export default function NewsroomPost({ params }: { params: { slug: string } }) {
 	}
 
 	return (
-		<main className="prose dark:prose-invert mx-auto">
+		<main className="prose dark:prose-invert mx-auto prose-zinc">
+			<time dateTime={post.date.toISOString()}>
+				{post.date.toLocaleDateString("en-US", {
+					dateStyle: "long",
+				})}
+			</time>
+
 			<h1>{post.title}</h1>
 
 			{post.content}
