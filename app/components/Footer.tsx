@@ -37,6 +37,9 @@ export default function Footer() {
 				Ruby icon designed by{" "}
 				<a href="https://x.com/AetherAurelia">Aether</a>.
 			</p>
+			<p>
+				<a href="/privacy">Privacy Policy</a>
+			</p>
 			<p>App Store and the Apple logo are trademarks of Apple Inc.</p>
 			<p>&copy; 2020-2024 Michael Burkhardt</p>
 		</footer>
