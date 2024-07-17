@@ -2,7 +2,7 @@ import { GitHubIcon, PressKitIcon, XIcon } from "@/components/Icons";
 
 export default function Footer() {
 	return (
-		<footer className="rounded-lg bg-zinc-50 dark:bg-zinc-950 my-3 text-zinc-800 dark:text-zinc-200 p-3 prose dark:prose-invert prose-sm prose-zinc dark:hover:prose-a:text-pink-300 hover:prose-a:text-pink-700 prose-a:transition prose-a:ease-in-out">
+		<footer className="rounded-lg bg-zinc-50 dark:bg-zinc-950 my-6 text-zinc-800 dark:text-zinc-200 p-3 prose dark:prose-invert prose-sm prose-zinc dark:hover:prose-a:text-pink-300 hover:prose-a:text-pink-700 prose-a:transition prose-a:ease-in-out">
 			<div className="flex space-x-4">
 				<a
 					href="https://x.com/getRubyApp"
