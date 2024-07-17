@@ -29,11 +29,12 @@ export function Navbar() {
 					</Link>
 
 					<a
-						className="flex items-center gap-2 rounded-full px-3 py-2 bg-black text-white dark:bg-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-200 transition ease-in-out group"
+						className="flex items-center gap-2 rounded-full p-2 bg-black text-white dark:bg-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-200 transition ease-in-out group"
 						href="https://apps.apple.com/us/app/ruby-your-news-assistant/id1522815729"
 					>
 						<AppStoreIcon className="group-hover:text-pink-300 dark:group-hover:text-pink-700 transition ease-in-out" />
-						Download
+
+						<span className="hidden sm:block">Download</span>
 					</a>
 				</div>
 			</div>
