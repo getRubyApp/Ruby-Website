@@ -34,7 +34,9 @@ export function Navbar() {
 					>
 						<AppStoreIcon className="group-hover:text-pink-300 dark:group-hover:text-pink-700 transition ease-in-out" />
 
-						<span className="hidden sm:block">Download</span>
+						<span className="hidden min-[420px]:block">
+							Download
+						</span>
 					</a>
 				</div>
 			</div>
