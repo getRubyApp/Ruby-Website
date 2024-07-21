@@ -12,6 +12,14 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 	};
 }
 
+export function generateStaticParams() {
+	return allPosts.map((post) => ({
+		params: { slug: post._meta.path },
+	}));
+}
+
+export const dynamicParams = false; // Don't attempt to generate post pages at runtime
+
 export default function Post({ params }: { params: { slug: string } }) {
 	const post = allPosts.find((post) => post._meta.path === params.slug);
 	if (!post) return notFound();
