@@ -41,7 +41,7 @@ export default function Home() {
 				{features.map((feature, index) => (
 					<div
 						key={index}
-						className="rounded-lg backdrop-blur-lg bg-zinc-50/50 dark:bg-zinc-950/50 p-4 hover:scale-[1.01] transition ease-in-out"
+						className="rounded-lg backdrop-blur-lg bg-zinc-50/50 dark:bg-zinc-950/50 p-4 hover:scale-[1.01] transition ease-in-out after:absolute after:inset-[1px] after:border-t-2 after:rounded-lg after:border-white/10 after:-z-10"
 					>
 						<h3 className="font-bold text-xl lg:text-2xl text-pink-700 dark:text-pink-300">
 							{feature.title}
