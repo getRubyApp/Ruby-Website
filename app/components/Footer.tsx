@@ -1,30 +1,19 @@
-import { GitHubIcon, PressKitIcon, XIcon } from "@/components/Icons";
+import { XIcon, GitHubIcon, ThreadsIcon } from "@/components/Icons";
 
 export default function Footer() {
 	return (
 		<footer className="rounded-lg bg-zinc-50 dark:bg-zinc-950 my-6 text-zinc-800 dark:text-zinc-200 p-3 prose dark:prose-invert prose-sm prose-zinc dark:hover:prose-a:text-pink-300 hover:prose-a:text-pink-700 prose-a:transition prose-a:ease-in-out">
 			<div className="flex space-x-4">
-				<a
-					href="https://x.com/getRubyApp"
-					title="Ruby on X"
-					target="_blank"
-				>
+				<a href="https://x.com/getRubyApp" target="_blank">
 					<XIcon />
 				</a>
 
-				<a
-					href="https://github.com/getRubyApp"
-					title="Ruby on GitHub"
-					target="_blank"
-				>
+				<a href="https://github.com/getRubyApp" target="_blank">
 					<GitHubIcon />
 				</a>
 
-				<a
-					href="https://dl.rubyapp.org/Ruby2PressKit.zip"
-					title="Download Press Kit"
-				>
-					<PressKitIcon />
+				<a href="https://www.threads.net/@getrubyapp" target="_blank">
+					<ThreadsIcon />
 				</a>
 			</div>
 
@@ -38,7 +27,8 @@ export default function Footer() {
 				<a href="https://x.com/AetherAurelia">Aether</a>.
 			</p>
 			<p>
-				<a href="/privacy">Privacy Policy</a>
+				<a href="/privacy">Privacy Policy</a> &bull;{" "}
+				<a href="https://dl.rubyapp.org/Ruby2PressKit.zip">Press Kit</a>
 			</p>
 			<p>App Store and the Apple logo are trademarks of Apple Inc.</p>
 			<p>&copy; 2020-2024 Michael Burkhardt</p>
