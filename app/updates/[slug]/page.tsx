@@ -14,7 +14,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
 export function generateStaticParams() {
 	return allPosts.map((post) => ({
-		params: { slug: post._meta.path },
+		slug: post._meta.path,
 	}));
 }
 
