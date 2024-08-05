@@ -1,4 +1,5 @@
 import { XIcon, GitHubIcon, ThreadsIcon } from "@/components/Icons";
+import Link from "next/link";
 
 export default function Footer() {
 	return (
@@ -27,7 +28,7 @@ export default function Footer() {
 				<a href="https://x.com/AetherAurelia">Aether</a>.
 			</p>
 			<p>
-				<a href="/privacy">Privacy Policy</a> &bull;{" "}
+				<Link href="/privacy">Privacy Policy</Link> &bull;{" "}
 				<a href="https://dl.rubyapp.org/Ruby2PressKit.zip">Press Kit</a>
 			</p>
 			<p>App Store and the Apple logo are trademarks of Apple Inc.</p>
