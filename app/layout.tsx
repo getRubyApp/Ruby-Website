@@ -16,6 +16,10 @@ export const metadata: Metadata = {
 	itunes: {
 		appId: "1522815729",
 	},
+	twitter: {
+		card: "summary_large_image",
+		site: "@getRubyApp",
+	},
 };
 
 export default function RootLayout({
