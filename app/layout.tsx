@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 	},
 	description:
 		"Ruby is a beautifully designed news app for Apple platforms, built to be simple and easy to use.",
+	itunes: {
+		appId: "1522815729",
+	},
 };
 
 export default function RootLayout({
