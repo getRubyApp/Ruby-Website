@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		site: "@getRubyApp",
 	},
+	metadataBase: new URL("https://rubyapp.co"),
 };
 
 export default function RootLayout({
