@@ -1,4 +1,12 @@
 import { Metadata } from "next";
+import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Link from "next/link";
+import { Aurora } from "@/components/Aurora";
+
+import Michael from "@/assets/Michael.webp";
+import Aether from "@/assets/Aether.webp";
+import Nick from "@/assets/Nick.webp";
 
 export const metadata: Metadata = {
 	title: "About",
@@ -37,19 +45,54 @@ export default function About() {
 				complete feature set.
 			</p>
 
-			<p>Development of Ruby is made possible by the following:</p>
+			<p>Development of Ruby is made possible by the following people:</p>
 
-			<ul>
-				<li>
-					<a href="https://x.com/mbrkhrdt">Michael Burkhardt</a>
-				</li>
-				<li>
-					<a href="https://x.com/AetherAurelia">Aether</a>
-				</li>
-				<li>
-					<a href="https://nickoates.com">Nick Oates</a>
-				</li>
-			</ul>
+			<div className="grid gap-4 grid-cols-1 lg:grid-cols-2 not-prose">
+				<Contributor
+					name="Michael Burkhardt"
+					role="Lead Developer"
+					src={Michael}
+					href="https://x.com/mbrkhrdt"
+				/>
+				<Contributor
+					name="Aether"
+					role="Icon Designer"
+					src={Aether}
+					href="https://x.com/AetherAurelia"
+				/>
+				<Contributor
+					name="Nick Oates"
+					role="Website Developer"
+					src={Nick}
+					href="https://nickoates.com"
+				/>
+			</div>
 		</main>
+	);
+}
+
+function Contributor(props: {
+	name: string;
+	role: string;
+	src: StaticImport;
+	href: string;
+}) {
+	return (
+		<Link
+			className="rounded-lg backdrop-blur-lg bg-zinc-50/50 dark:bg-zinc-950/50 p-4 hover:scale-[1.01] transition ease-in-out after:absolute after:inset-0 after:border-y-2 after:rounded-lg after:border-t-white/10 after:border-b-black/10 after:-z-10 drop-shadow-sm border border-zinc-300/50 dark:border-zinc-700/50 text-center relative overflow-hidden"
+			href={props.href}
+		>
+			<Image
+				src={props.src}
+				alt={props.name}
+				className="rounded-full size-36 mx-auto mb-4 drop-shadow-sm"
+			/>
+			<h3 className="font-bold text-xl lg:text-2xl text-pink-700 dark:text-pink-300">
+				{props.name}
+			</h3>
+			<p>{props.role}</p>
+
+			<Aurora />
+		</Link>
 	);
 }
