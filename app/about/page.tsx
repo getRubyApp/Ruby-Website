@@ -6,8 +6,8 @@ export const metadata: Metadata = {
 
 export default function About() {
 	return (
-		<main className="prose dark:prose-invert mx-auto prose-zinc">
-			<h1>About Ruby</h1>
+		<main className="prose dark:prose-invert mx-auto prose-zinc dark:hover:prose-a:text-pink-300 hover:prose-a:text-pink-700 prose-a:transition prose-a:ease-in-out">
+			<h1 className="mb-0 tracking-tight font-bold">About Ruby</h1>
 
 			<p>
 				Ruby is a simple and familiar app that delivers the news.

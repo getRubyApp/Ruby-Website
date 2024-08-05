@@ -1,7 +1,7 @@
 export default function PrivacyPolicy() {
 	return (
-		<main className="prose dark:prose-invert prose-zinc mx-auto">
-			<h1>Privacy Policy</h1>
+		<main className="prose dark:prose-invert mx-auto prose-zinc dark:hover:prose-a:text-pink-300 hover:prose-a:text-pink-700 prose-a:transition prose-a:ease-in-out">
+			<h1 className="mb-0 tracking-tight font-bold">Privacy Policy</h1>
 
 			<p>
 				<strong>Last updated on February 20th, 2024.</strong>

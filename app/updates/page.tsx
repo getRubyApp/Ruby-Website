@@ -10,12 +10,10 @@ export const metadata: Metadata = {
 
 export default function Updates() {
 	return (
-		<main>
-			<h1 className="font-bold text-3xl lg:text-4xl tracking-tight">
-				Updates
-			</h1>
+		<main className="prose dark:prose-invert mx-auto prose-zinc dark:hover:prose-a:text-pink-300 hover:prose-a:text-pink-700 prose-a:transition prose-a:ease-in-out">
+			<h1 className="mb-0 tracking-tight font-bold">Updates</h1>
 
-			<p className="text-zinc-800 dark:text-zinc-200 py-2">
+			<p className="text-zinc-800 dark:text-zinc-200 my-2">
 				Stay up to date with the latest Ruby news and features.{" "}
 				<a
 					href="https://x.com/intent/user?screen_name=getRubyApp"
@@ -26,7 +24,7 @@ export default function Updates() {
 				for more frequent updates.
 			</p>
 
-			<ul>
+			<ul className="not-prose text-black dark:text-white">
 				{allPosts
 					.sort((a, b) => b.date.getTime() - a.date.getTime())
 					.map((post) => (
