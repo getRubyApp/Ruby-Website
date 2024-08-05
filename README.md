@@ -1,4 +1,4 @@
-# [Ruby Website](https://rubyapp.org)
+# [Ruby Website](https://rubyapp.co)
 
 ![Screen shot of Ruby Website](https://github.com/user-attachments/assets/29029660-276f-4e6e-acb3-5cee2df8eeb5)
 
