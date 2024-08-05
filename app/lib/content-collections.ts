@@ -3,7 +3,7 @@ import { compileMDX } from "@content-collections/mdx";
 
 const posts = defineCollection({
 	name: "posts",
-	directory: "posts",
+	directory: "../../posts",
 	include: "**/*.{md,mdx}",
 	schema: (z) => ({
 		title: z.string(),
